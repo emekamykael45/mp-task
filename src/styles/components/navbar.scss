@@ -1,0 +1,66 @@
+.navbar_container {
+  @include flex-position(space-between, center);
+  margin: 18px 24px;
+  margin-bottom: 0;
+  padding: 8px;
+  background: $color-black;
+  border-radius: 18px;
+  overflow: hidden;
+
+  transition-duration: 1s;
+  transform: translateY(50px);
+
+  .logo_container {
+    padding-left: 12px;
+
+    transition-duration: 1s;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  .links {
+    @include flex-position(center, center);
+    gap: 42px;
+    padding: 14px 22px;
+    background: $color-black-3;
+    border-radius: 12px;
+
+    transition-duration: 1s;
+    transform: translateY(100px);
+    opacity: 0;
+
+    a {
+      font-size: 0.8em;
+      color: $color-grey-4;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  .link_btn {
+    transition-duration: 1s;
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  &.inView {
+    transform: translateY(0px);
+
+    .logo_container {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+
+    .links {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+
+    .link_btn {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}

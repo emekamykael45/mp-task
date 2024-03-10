@@ -1,0 +1,138 @@
+.footer_container {
+  padding-top: 100px;
+  color: $color-grey-5;
+  background: $color-black;
+
+  .top_links {
+    @include flex-position(space-between, center);
+    padding-bottom: 38px;
+    border-bottom: 1px solid $color-black-3;
+
+    transition-duration: 1s;
+    transform: translateY(100px);
+    opacity: 0;
+
+    .links {
+      @include flex-position(flex-start, center);
+      gap: 30px;
+    }
+
+    .email {
+      font-size: 3.5em;
+      font-weight: 400;
+      color: $color-white;
+    }
+
+    a:hover {
+      color: $color-white;
+    }
+  }
+
+  .address_and_socials {
+    @include flex-position(space-between, center);
+    margin-top: 38px;
+
+    transition-duration: 1s;
+    transform: translateY(100px);
+    opacity: 0;
+
+    .addresses {
+      @include flex-position(flex-start, center);
+      gap: 92px;
+
+      .item {
+        h6 {
+          font-size: 0.95em;
+          font-weight: 500;
+          color: $color-white;
+          line-height: 150%;
+        }
+
+        p {
+          font-size: 0.95em;
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+    }
+
+    .socials {
+      @include flex-position(flex-end, flex-end);
+      flex-direction: column;
+      gap: 18px;
+
+      a {
+        display: block;
+        font-size: 1.1em;
+        color: $color-white;
+      }
+    }
+  }
+
+  .others {
+    @include flex-position(space-between, center);
+    margin-top: 38px;
+
+    h2 {
+      @include flex-position(flex-start, flex-start);
+      margin-left: -10px;
+      font-size: 7em;
+      font-weight: 400;
+      color: $color-white;
+
+      transition-duration: 0.75s;
+      transform: translateY(100px);
+      opacity: 0;
+
+      span {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.7em;
+        font-weight: 600;
+      }
+    }
+
+    .links {
+      @include flex-position(flex-start, center);
+      gap: 72px;
+
+      a:hover {
+        color: $color-white;
+      }
+    }
+
+    img {
+      transition-duration: 1s;
+      transform: scale(0.3);
+      opacity: 0.5;
+    }
+  }
+
+  &.inView {
+    .top_links {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .address_and_socials {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .others {
+      h2 {
+        transform: translateY(0px);
+        opacity: 1;
+
+        &::before {
+          @include reveal-transition(0.5s, $color-black);
+        }
+      }
+
+      img {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}

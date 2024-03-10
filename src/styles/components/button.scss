@@ -1,0 +1,42 @@
+.link_btn {
+  padding: 13px 28px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.link_btn_white {
+  @extend .link_btn;
+  color: $color-black-2;
+  background: $color-white;
+
+  &:hover,
+  &:focus {
+    @extend .link_btn_white;
+  }
+}
+
+.link_btn_grey {
+  @extend .link_btn;
+  color: $color-black-2;
+  background: $color-grey-2;
+
+  &:hover,
+  &:focus {
+    @extend .link_btn_grey;
+  }
+}
+
+.link_btn_orange {
+  @extend .link_btn;
+  color: $color-white;
+  background: $color-orange;
+
+  &:hover,
+  &:focus {
+    @extend .link_btn_orange;
+  }
+}

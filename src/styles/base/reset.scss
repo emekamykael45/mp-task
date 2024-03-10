@@ -1,0 +1,55 @@
+@import "../abstract/mixins.scss";
+@import "../abstract/variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+body {
+  font-family: $font-family;
+  font-size: 1em;
+  font-weight: normal;
+  background: $color-white;
+}
+
+div,
+h1,
+h2,
+p,
+a,
+span {
+  margin: 0;
+  font-family: $font-family !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:active,
+  &:hover,
+  &:focus {
+    @extend a;
+  }
+}
+
+svg {
+  max-width: 100px;
+  height: auto;
+}
+
+.section {
+  padding: 80px 48px;
+}
